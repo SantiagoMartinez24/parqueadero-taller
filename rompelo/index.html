@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sistema de Parqueadero</title>
+<style>
+  body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; }
+  h1 { color: #1a3a6b; }
+  form { display: flex; gap: 8px; margin-bottom: 16px; }
+  input { flex: 1; padding: 6px; }
+  button { padding: 6px 12px; cursor: pointer; }
+  ul { padding-left: 20px; }
+  #avisos { background: #f4f4f4; padding: 10px; border-radius: 6px; min-height: 40px; font-size: 14px; }
+  #avisos div { padding: 2px 0; }
+</style>
+</head>
+<body>
+  <h1>🅿️ Sistema de Parqueadero</h1>
+  <p>Cupos disponibles: <strong id="cupos">-</strong></p>
+
+  <h2>Registrar entrada</h2>
+  <form id="form-entrada">
+    <input id="placa-entrada" type="text" placeholder="Placa del vehículo" required>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <h2>Registrar salida</h2>
+  <form id="form-salida">
+    <input id="placa-salida" type="text" placeholder="Placa del vehículo" required>
+    <button type="submit">Salir</button>
+  </form>
+
+  <h2>Vehículos activos</h2>
+  <ul id="lista-vehiculos"></ul>
+
+  <h2>Avisos</h2>
+  <div id="avisos"></div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
