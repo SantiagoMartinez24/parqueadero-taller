@@ -29,7 +29,7 @@ if(!fs.existsSync(REGLAS)){
   console.error('No encuentro ' + REGLAS);
   process.exit(1);
 }
-const reglas=JSON.parse(fs.readFileSync(REGLAS,'utf8'));
+const { reglas } = JSON.parse(fs.readFileSync(REGLAS,'utf8'));
 const lista=fs.existsSync(RAIZ)? archivos(RAIZ) : [];
 
 if(lista.length===0){

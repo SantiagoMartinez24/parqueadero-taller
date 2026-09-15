@@ -10,8 +10,12 @@
  *
  * Sin dependencias. Se ejecuta con:  node tools/verificar-arquitectura.js
  */
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const RAIZ = path.join(__dirname, '..', 'src');
 const CONFIG = path.join(__dirname, '..', 'arquitectura', 'reglas.json');
