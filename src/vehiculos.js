@@ -2,6 +2,8 @@
 // NO importa avisos.js (regla R1 / ADR-002): si avisos falla, registrar una entrada o salida
 // no se puede caer con él. Este módulo solo devuelve un resultado; quien lo llama decide avisar.
 
+import { avisarEvento } from './avisos.js';
+
 const CAPACIDAD_TOTAL = 5;
 const vehiculosActivos = []; // { placa, horaEntrada }
 
