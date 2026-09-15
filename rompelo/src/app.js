@@ -1,4 +1,6 @@
-// app.js — responsabilidad única: conectar la interfaz (HTML) con la lógica de negocio
+// app.js — responsabilidad única: conectar la interfaz (HTML) con la lógica de negocio.
+// Es el único módulo que conoce a los tres módulos de negocio; por eso es el que decide
+// cuándo avisar, en vez de dejar que vehiculos.js dependa de avisos.js.
 import { registrarEntrada, registrarSalida, listarVehiculosActivos, cuposDisponibles } from './vehiculos.js';
 import { calcularCosto, formatearCosto } from './tarifas.js';
 import { avisarEvento } from './avisos.js';

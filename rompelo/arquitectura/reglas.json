@@ -1,9 +1,19 @@
-[
-  {
-    "id": "R1",
-    "adr": "ADR-001",
-    "modulo": "PONGAN-AQUI-EL-MODULO",
-    "no_puede_importar": ["PONGAN-AQUI-EL-OTRO"],
-    "porque": "Escriban aqui, en lenguaje de negocio, que se rompe si esta regla se viola."
-  }
-]
+{
+  "descripcion": "Reglas de arquitectura del Sistema de Parqueadero. Cada regla nace de un ADR. El pipeline las verifica en cada cambio.",
+  "reglas": [
+    {
+      "id": "R1",
+      "adr": "ADR-002",
+      "modulo": "vehiculos",
+      "no_puede_importar": ["avisos"],
+      "porque": "Si el modulo de avisos falla, el registro de entrada o salida de un vehiculo NO se puede caer."
+    },
+    {
+      "id": "R2",
+      "adr": "ADR-001",
+      "modulo": "tarifas",
+      "no_puede_importar": ["vehiculos"],
+      "porque": "El calculo de tarifas es de solo lectura y nunca puede modificar el estado de los vehiculos."
+    }
+  ]
+}

@@ -1,9 +1,5 @@
-// avisos.js — responsabilidad única: informar eventos del sistema (cupo lleno, entradas, salidas)
-export function avisarCupoLleno(placa) {
-  console.warn(`Aviso: no hay cupo disponible para ${placa}`);
-  mostrarEnPantalla(`⚠️ Cupo lleno. No se pudo registrar ${placa}`);
-}
-
+// avisos.js — responsabilidad única: informar eventos del sistema (cupo lleno, entradas, salidas).
+// No importa a ningún otro módulo del negocio.
 export function avisarEvento(mensaje) {
   console.log(`Aviso: ${mensaje}`);
   mostrarEnPantalla(mensaje);
